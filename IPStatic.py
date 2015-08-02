@@ -1,8 +1,4 @@
-import platform
-import socket
-import getpass
-hostname = socket.gethostname()
-print("Domain and Hostname",socket.getfqdn())
-print("User Connected",getpass.getuser())
-print("OS Release: ",platform.system(),platform.release())
-print("Host IP is:",socket.gethostbyname(socket.gethostname))
+netsh int ip set address "Local Aea Cnnection" static 192.168.254.15 255.255.0.0 192.168.254.1
+netsh interface ip set dns "Local Area Connection" static 8.8.8.8
+net int ip show config
+pause
